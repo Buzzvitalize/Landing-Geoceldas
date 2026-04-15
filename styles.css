@@ -1,0 +1,120 @@
+:root {
+  --overlay: rgba(7, 19, 35, 0.52);
+  --text: #f6f7fb;
+  --accent: #57b4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #0f1724;
+}
+
+.section-bg {
+  position: relative;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: -1;
+}
+
+.content {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+p,
+li {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.55;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #031428;
+  background: linear-gradient(135deg, #56d6ff, #6fa6ff);
+}
+
+.hero-bg {
+  background-image: url("img/Sección-hero-portada.png");
+}
+
+.beneficios-bg {
+  background-image: url("img/Sección beneficios.png");
+}
+
+.aplicaciones-bg {
+  background-image: url("img/Sección aplicaciones.png");
+}
+
+.contacto-bg {
+  background-image: url("img/Sección final -contacto-o-cierre.png");
+}
+
+@media (max-width: 640px) {
+  .section-bg {
+    min-height: 68vh;
+  }
+
+  .content {
+    padding: 3rem 1rem;
+  }
+}
