@@ -1,0 +1,144 @@
+:root {
+  --overlay: rgba(7, 19, 35, 0.44);
+  --text: #f6f7fb;
+  --accent: #57b4ff;
+  --page-bg: #0f1724;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+body {
+  padding: 1rem;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.section-bg {
+  position: relative;
+  min-height: clamp(260px, 42vw, 560px);
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+}
+
+.hero {
+  min-height: clamp(320px, 52vw, 640px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: -1;
+}
+
+.content {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: clamp(1.2rem, 3vw, 2.8rem);
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+}
+
+p,
+li {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.1rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #031428;
+  background: linear-gradient(135deg, #56d6ff, #6fa6ff);
+}
+
+.hero-bg {
+  background-image: url("img/Sección-hero-portada.png");
+}
+
+.beneficios-bg {
+  background-image: url("img/Sección beneficios.png");
+}
+
+.aplicaciones-bg {
+  background-image: url("img/Sección aplicaciones.png");
+}
+
+.contacto-bg {
+  background-image: url("img/Sección final -contacto-o-cierre.png");
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0.65rem;
+  }
+
+  main {
+    gap: 0.65rem;
+  }
+
+  .section-bg {
+    min-height: 240px;
+    border-radius: 0.75rem;
+  }
+
+  .hero {
+    min-height: 300px;
+  }
+}
